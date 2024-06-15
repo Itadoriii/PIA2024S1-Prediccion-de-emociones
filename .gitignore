@@ -1,0 +1,9 @@
+__pycache__/
+logs/
+results/
+saved_models
+.vscode/
+myenv/
+Comentarios_rows.csv
+archivo_con_predicciones.csv
+db_dataset.py
