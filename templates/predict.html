@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+    <title>Predicción de emociones</title>
+</head>
+<body>
+    <nav class="menu">
+        <section class="menu__container">
+            <ul class="menu__links">
+                <li class="menu__item">
+                    <a href="/" class="menu__link">Inicio</a>
+                </li>
+                <li class="menu__item menu__item--show">
+                    <a href="#" class="menu__link">Modelo IA<img src="/static/assets/arrow.svg" class="menu__arrow"></a>
+    
+                    <ul class="menu__nesting">
+                        <li class="menu__inside">
+                            <a href="/predict" class="menu__link menu__link--inside">Primer modelo</a>
+                        </li>
+                        <li class="menu__inside">
+                            <a href="#" class="menu__link menu__link--inside">Segundo modelo</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Sobre Nosotros</a>
+                </li>
+                
+    
+            </ul>
+
+            <div class="menu__hamburguer">
+                <img src="/static/assets/menu.svg" class="menu__img">
+            </div>
+        </section>
+    </nav>
+    <main>
+        <form  class="search-bar" method="POST" action="/predict" >
+            <input type="text" id="user_input" name="user_input" placeholder="Ingresa una frase" required>
+            <button class="search-btn"  type="submit" aria-label="Buscar">
+                <img src="assets/lupa.svg">
+            </button>
+        </form>
+  
+        <div class="result-container">
+            <div class="result">
+                <h2>Frase: {{ user_text }}</h2>
+                <h2>Sentimiento: {{ prediction }}</h2>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="contenedor-bert">
+            <img src="/static/assets/bert_letrero.png" alt="BERT letrero">
+            <div class="bib-entry">
+                <span class="field">Título: MarIA: Spanish Language Models </span>
+                <span class="field">Autor: Asier Gutiérrez Fandiño, Jordi Armengol Estapé, </span>
+                <span class="field">Marc Pàmies, Joan Llop Palao, Joaquin Silveira Ocampo, </span>
+                <span class="field">Casimiro Pio Carrino, Carme Armentano Oller,</span>
+                <span class="field">Carlos Rodriguez Penagos, Aitor Gonzalez Agirre.</span>
+                <span class="field">DOI: <a href="https://doi.org/10.26342/2022-68-3">Click</a></span> 
+               <br>
+               <br>
+               <br>
+                <span class="field">Revista: Procesamiento del Lenguaje Natural</span>
+                <span class="field">Editorial: Sociedad Española para el Procesamiento  </span>
+                <span class="field"> del Lenguaje Natural </span>
+                <span class="field">URL: <a href="https://upcommons.upc.edu/handle/2117/367156#.YyMTB4X9A-0.mendeley">Click aqui</a></span>
+                <span class="field">Volumen: 68</span>
+                <span class="field">Año: 2022</span> 
+            </div>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
