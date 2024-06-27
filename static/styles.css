@@ -157,6 +157,7 @@ footer {
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
+    z-index: 3;
     
 }
 .menu__container.image{
@@ -272,6 +273,7 @@ footer {
         display: grid;
         grid-auto-rows: max-content;
         transform: translateX(100%);
+        z-index: 3;
     }
 
     .menu__links--show{
@@ -307,11 +309,15 @@ footer {
 }
 .contenedor-bert {
     position: relative;
-    display: inline-block; 
+    padding: auto;
+    display: inline-block;
+     
 }
 
 .contenedor-bert img {
-    display: block; 
+    display: flex;
+    align-content: center; 
+    z-index: 1;
 }
 
 .bib-entry {
@@ -323,14 +329,17 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    padding: 100px;
+    padding: 90px;
+    padding-top: 175px;
     box-sizing: border-box; 
     text-align: left;
     overflow: auto; 
     font-size: 10px; 
-    padding-top: 200px;
     background-color: transparent;
-    border: none; 
+    border: none;
+    margin-top: 15px; 
 
+}
+.field {
+    padding: auto;
 }
