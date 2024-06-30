@@ -28,9 +28,11 @@
                 </li>
                 
                 <li class="menu__item">
-                    <a href="#" class="menu__link">Sobre Nosotros</a>
+                    <a href="/sobrenosotros" class="menu__link">Sobre Nosotros</a>
                 </li>
-                
+                <li class="menu__item">
+                    <a href="/Estudiosrelacionados" class="menu__link">Estudios Relacionados</a>
+                </li>
     
             </ul>
 
@@ -40,6 +42,11 @@
         </section>
     </nav>
     <main>
+        <div class="section">
+            <h3>Este modelo fue desarrollado para poder interpretar como detectar emociones contenidas dentro de una frase.</h3>
+            <ul>Dentro de las emociones que el modelo puede detectar se encuentran:</ul>
+            <li>Admiración, alegria, amor, ansiedad, apoyo, arrepentimiento, asombro, cansansio, confusión, culpa, curiosidad, decepción, desdén, deseo, desesperación, dolor, duda, frustación, honestidad, impresión, indignación, interés, molestia, odio, orgullo, preocupación, remordimiento, sorpresa, tranquilidad, tristesa, vergüenza.</li>
+        </div>
         <form  class="search-bar" method="POST" action="/predict2" >
             <input type="text" id="user_input" name="user_input" placeholder="Ingresa una frase" required>
             <button class="search-btn"  type="submit" aria-label="Buscar">

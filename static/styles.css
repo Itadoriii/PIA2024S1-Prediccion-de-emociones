@@ -343,3 +343,20 @@ footer {
 .field {
     padding: auto;
 }
+.section{
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+}
+.section h3{
+    text-align: justify;
+    margin: 10px;
+}
+.section ul{
+    text-justify: left;
+    
+}
+.section li{
+    margin: 15px;
+    border: 2px solid black;
+}
