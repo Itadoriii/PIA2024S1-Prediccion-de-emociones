@@ -210,6 +210,12 @@ def create_app(test_config=None):
     @app.route('/')
     def hello():
         return render_template('index.html')
+    @app.route('/sobrenosotros')
+    def snosotros():
+        return render_template('sobrenosotros.html') 
+    @app.route('/estudiosrelacionados')
+    def Erelacion():
+        return render_template('estudiosrelacionados.html')
     
     
 
@@ -233,6 +239,8 @@ def create_app(test_config=None):
             return render_template('/predict2.html', prediction=prediction, user_text=user_text, factor_50=factor_50, factor_30=factor_30, factor_20=factor_20)
 
         return render_template('/predict2.html')
+    
+
 
     return app
 
