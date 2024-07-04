@@ -357,6 +357,8 @@ footer {
     
 }
 .section li{
-    margin: 15px;
+    list-style: none;
+    text-align: left;
+    margin: 20px;
     border: 2px solid black;
 }
