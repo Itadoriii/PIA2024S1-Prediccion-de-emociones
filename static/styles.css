@@ -362,3 +362,16 @@ footer {
     margin: 20px;
     border: 2px solid black;
 }
+.conteiner {
+    padding: 30px;
+    text-align: justify;
+}
+.conteiner p{
+    padding: 20px;
+}
+.conteriner .pdf{
+    display: block;
+    margin: auto;
+    width: 1650px;
+    height: 100px;
+}

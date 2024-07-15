@@ -43,7 +43,29 @@
         </section>
     </nav>
     <div class="conteiner">
-        <h1>hola mundo</h1>
+        <h2>Sobre este proyecto</h2>
+        <h3>Evolución y Aplicación del Machine Learning en el Procesamiento del Lenguaje Natural</h3>
+        <p>El Machine Learning ha evolucionado desde sus inicios hasta convertirse en una herramienta esencial en múltiples campos, especialmente en el procesamiento del lenguaje natural. Modelos preentrenados como BERT (Bidirectional Encoder Representations from Transformers) y GPT han revolucionado la manera en que abordamos tareas de Procesamiento de Lenguaje Natural (NLP), permitiendo crear sistemas más precisos y eficientes. Aplicando estas tecnologías al análisis de sentimientos, es posible desarrollar modelos que entiendan y clasifiquen el sentimiento de las frases con gran precisión, facilitando su implementación en diversas aplicaciones comerciales y de investigación.
+        </p>
+        <h3>¿Qué es un Modelo de Entrenamiento en Machine Learning?
+        </h3>
+        <p>Un modelo de entrenamiento en Machine Learning se refiere al proceso mediante el cual un algoritmo de aprendizaje automático se entrena utilizando un conjunto de datos para realizar una tarea específica, como la clasificación, la regresión, la agrupación (clustering) o la predicción. Durante el entrenamiento, el modelo aprende patrones y relaciones a partir de los datos que luego puede aplicar a nuevos datos no vistos para hacer predicciones o tomar decisiones.
+        </p>
+        <h3>Descripción del Proyecto</h3>
+        <p>Este proyecto se centra en la creación de un modelo de Aprendizaje Automático (Machine Learning) utilizando el método supervisado. Este método comienza con datos de entrenamiento que incluyen el resultado requerido para ajustar el algoritmo de aprendizaje automático. El modelo pertenece a la categoría de Clasificación, donde los algoritmos examinan una entrada y eligen una respuesta a partir de opciones predefinidas. En este caso, el modelo predecirá la emoción en una frase, y este proceso se escalará para predecir miles de frases simultáneamente. Los resultados de todas las predicciones permitirán realizar interpretaciones, como determinar la emoción predominante en una red social específica.
+            Estos resultados se relacionarán con el modelo de inteligencia emocional: "Modelo de Inteligencia Emocional Final - IEom2 Reconocimiento y Regulación Emocional por Subescala – Tecer 2012 - final". Por ejemplo, si la emoción predominante en el conjunto de resultados es tristeza, se podría inferir que en dicho conjunto predomina la autoconciencia emocional en un 50%, el autocontrol emocional en un 30%, y la tolerancia a la frustración en un 20%, indicando que contiene más capital emocional que capital social. Esto se basará en una matriz de pesos creada por los predecesores de este proyecto y revisada y corregida por los actuales contribuyentes del mismo, donde se asigna un cierto peso en porcentaje a las 281 emociones encontradas según la representación de los capitales del modelo IEom2.
+        </p>
+        <h3>Uso de la Base de Datos</h3>
+        <p>La base de datos se utilizará como conjunto de datos de entrenamiento, enseñando a un modelo creado por nosotros a predecir la emoción predominante en una frase. Para lograrlo, el modelo tomará la frase y su "respuesta correcta" (la emoción identificada), la tokenizará (transformará estos datos en información procesable por la computadora) y identificará patrones entre los datos. Con estos patrones, el modelo podrá hacer predicciones cada vez más precisas a medida que aumente la cantidad de datos de entrenamiento.
+        </p>
+        <h3>Modelo Base y Ajuste del Dataset</h3>
+        <p>Para la creación de este modelo se utilizará como base el modelo RoBERTa-bne, una versión adaptada al español de RoBERTa, que a su vez mejora el modelo BERT. Nuestro modelo adaptará RoBERTa-bne a la tarea de predicción de emociones. Además, se implementará un método de extracción automática de información (scraping) para conseguir datos de entrenamiento o de prueba.
+            Una tarea crucial para el entrenamiento del modelo será ajustar el conjunto de datos, agrupando emociones con poca representación junto con una emoción sinónima, por ejemplo, agrupando "felicidad" en "alegría". Esto reducirá la cantidad de “respuestas correctas posibles” y permitirá un modelo más preciso. Este ajuste resultó en la reducción de 281 emociones a 31 grupos, liderados y nombrados según la emoción más representativa del grupo.
+        </p>
+        <h3>Representación e Interpretación de Resultados</h3>
+        <p>Finalmente, para la representación e interpretación de todos estos resultados se ha creado una página web, que facilitará el análisis y visualización de las predicciones y su relación con el modelo de inteligencia emocional IEom2.
+        </p>
+
     </div>
     <script src="{{ url_for('static', filename='main.js') }}"></script>
 
