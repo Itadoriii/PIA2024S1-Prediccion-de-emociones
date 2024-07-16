@@ -43,7 +43,98 @@
         </section>
     </nav>
     <div class="conteiner">
-        <h1>hola mundo</h1>
+        <h2>Sobre este proyecto</h2>
+        <h3>Descripción del Proyecto</h3>
+        <p>Este proyecto se centra en la creación de un modelo de Aprendizaje Automático (Machine Learning) que sea capaz de reconocer emociones dentro de una frase, utilizando el método supervisado. Este método comienza con datos de entrenamiento que incluyen el resultado requerido para ajustar el algoritmo de aprendizaje automático. El modelo pertenece a la categoría de Clasificación, donde los algoritmos examinan una entrada y eligen una respuesta a partir de opciones predefinidas. En este caso, el modelo predecirá la emoción en una frase, y este proceso se escalará para predecir miles de frases simultáneamente. Los resultados de todas las predicciones permitirán realizar interpretaciones, como determinar la emoción predominante en una red social específica.
+            Estos resultados se relacionarán con el modelo de inteligencia emocional: "Modelo de Inteligencia Emocional Final - IEom2 Reconocimiento y Regulación Emocional por Subescala – Tecer 2012 - final". Por ejemplo, si la emoción predominante en el conjunto de resultados es tristeza, se podría inferir que en dicho conjunto predomina la autoconciencia emocional en un 50%, el autocontrol emocional en un 30%, y la tolerancia a la frustración en un 20%, indicando que contiene más capital emocional que capital social. Esto se basará en una matriz de pesos creada por los predecesores de este proyecto y revisada y corregida por los actuales contribuyentes del mismo, donde se asigna un cierto peso en porcentaje a las 281 emociones encontradas según la representación de los capitales del modelo IEom2.
+            Ademas del modelo de machine learning, realizamos 2 programas que recolectan comentarios de redes sociales (Reddit y X) de manera automatica, estos datos fueron procesados por nuestro modelo con el fin de conocer que emociones son las que mas entan presentes en los comentarios que recolectamos
+        </p>
+
+        <h3>Evolución y Aplicación del Machine Learning en el Procesamiento del Lenguaje Natural</h3>
+        <p>El Machine Learning ha evolucionado desde sus inicios hasta convertirse en una herramienta esencial en múltiples campos, especialmente en el procesamiento del lenguaje natural. Modelos preentrenados como BERT (Bidirectional Encoder Representations from Transformers) y GPT han revolucionado la manera en que abordamos tareas de Procesamiento de Lenguaje Natural (NLP), permitiendo crear sistemas más precisos y eficientes. Aplicando estas tecnologías al análisis de sentimientos, es posible desarrollar modelos que entiendan y clasifiquen el sentimiento de las frases con gran precisión, facilitando su implementación en diversas aplicaciones comerciales y de investigación.
+        </p>
+        <h3>¿Qué es un Modelo de Entrenamiento en Machine Learning?
+        </h3>
+        <p>Un modelo de entrenamiento en Machine Learning se refiere al proceso mediante el cual un algoritmo de aprendizaje automático se entrena utilizando un conjunto de datos para realizar una tarea específica, como la clasificación, la regresión, la agrupación (clustering) o la predicción. Durante el entrenamiento, el modelo aprende patrones y relaciones a partir de los datos que luego puede aplicar a nuevos datos no vistos para hacer predicciones o tomar decisiones.
+        </p>
+        <h3>Modelo Base y Ajuste del Dataset</h3>
+        <p>Para la creación de este modelo se utilizará como base el modelo RoBERTa-bne, una versión adaptada al español de RoBERTa, que a su vez mejora el modelo BERT. Nuestro modelo adaptará RoBERTa-bne a la tarea de predicción de emociones. Además, se implementará un método de extracción automática de información (scraping) para conseguir datos de entrenamiento o de prueba.
+            Una tarea crucial para el entrenamiento del modelo será ajustar el conjunto de datos, agrupando emociones con poca representación junto con una emoción sinónima, por ejemplo, agrupando "felicidad" en "alegría". Esto reducirá la cantidad de “respuestas correctas posibles” y permitirá un modelo más preciso. Este ajuste resultó en la reducción de 281 emociones a 31 grupos, liderados y nombrados según la emoción más representativa del grupo.
+        </p>
+        <h3>Recoleccion de Comentarios</h3>
+        <p>Se recolecto un total de 110.046 comentarios de Reddit y X provenientes de 420 Urls.</p>
+        <h3>Resultados</h3>
+        <p>Al usar nuestro modelo de prediccion de emociones en los comentarios que recolectamos a lo largo del semestre obtuvimos los siguientes resultados .</p>
+        <p>Listado de emociones y la cantidad de personas por emoción:
+            alegría: 33271 personas
+            indignación: 14704 personas
+            molestia: 8728 personas
+            duda: 7194 personas
+            tristeza: 7118 personas
+            interés: 6538 personas
+            desdén: 5494 personas
+            frustración: 5142 personas
+            confusión: 4052 personas
+            ansiedad: 3450 personas
+            preocupación: 2419 personas
+            apoyo: 2246 personas
+            decepción: 1904 personas
+            odio: 1714 personas
+            amor: 1099 personas
+            deseo: 1288 personas
+            sorpresa: 764 personas
+            dolor: 588 personas
+            orgullo: 541 personas
+            cansancio: 517 personas
+            tranquilidad: 396 personas
+            Vergüenza: 333 personas
+            Arrepentimiento: 184 personas
+            admiración: 170 personas
+            desesperación: 139 personas
+            culpa: 33 personas
+            Asombro: 20 personas
+            
+            Total de emociones analizadas: 110046 personas
+        </p>
+        <p>
+            Porcentaje de personas por emoción:
+            alegría: 30.23%
+            molestia: 7.93%
+            Indignación: 7.49%
+            duda: 6.54%
+            tristeza: 6.47%
+            interés: 5.94%
+            desdén: 4.99%
+            frustración: 4.67%
+            confusión: 3.68%
+            ansiedad: 3.14%
+            preocupación: 2.20%
+            apoyo: 2.04%
+            decepción: 1.73%
+            odio: 1.56%
+            amor: 1.00%
+            deseo: 1.00%
+            sorpresa: 0.69%
+            dolor: 0.53%
+            orgullo: 0.49%
+            cansancio: 0.47%
+            tranquilidad: 0.36%
+            Vergüenza: 0.30%
+            Deseo: 0.17%
+            Arrepentimiento: 0.17%
+            admiración: 0.15%
+            desesperación: 0.13%
+            Culpa: 0.03%
+            Asombro: 0.02%
+            
+            </p>
+        <img src="/static/assets/tabla.jpg" >
+        <img src="/static/assets/grafico1.jpeg" >
+        <img src="/static/assets/grafico2.jpeg" >
+        
+
+        
+
     </div>
    
     <script src="{{ url_for('static', filename='main.js') }}"></script>
