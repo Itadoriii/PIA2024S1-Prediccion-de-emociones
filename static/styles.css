@@ -315,9 +315,12 @@ footer {
 }
 
 .contenedor-bert img {
+    
     display: flex;
     align-content: center; 
     z-index: 1;
+    filter: brightness(0) invert(1);
+    background-color: white;
 }
 
 .bib-entry {
