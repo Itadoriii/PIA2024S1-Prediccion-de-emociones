@@ -346,24 +346,33 @@ footer {
 .field {
     padding: auto;
 }
-.section{
+.section {
     display: flex;
     flex-direction: column;
     padding: auto;
 }
-.section h3{
+
+.section h3 {
     text-align: justify;
     margin: 10px;
 }
-.section ul{
-    text-justify: left;
-    
-}
-.section li{
+
+.section ul.metrics {
     list-style: none;
+    padding: 0;
     text-align: left;
-    margin: 20px;
-    border: 2px solid black;
+}
+
+.section ul.emotions {
+    columns: 3; /* Divide el contenido en 3 columnas */
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    list-style: none;
+    padding: 0; /* Elimina el padding para que las columnas estén alineadas */
+}
+
+.section li {
+    margin: 5px 0; /* Ajusta el margen entre los elementos */
 }
 .conteiner {
     padding: 30px;

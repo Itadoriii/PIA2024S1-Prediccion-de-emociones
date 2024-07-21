@@ -43,10 +43,50 @@
     </nav>
     <main>
         <div class="section">
-            <h3>Este modelo fue desarrollado para poder interpretar como detectar emociones contenidas dentro de una frase.</h3>
-            <ul>Dentro de las emociones que el modelo puede detectar se encuentran:</ul>
-            <li>Admiración, alegria, amor, ansiedad, apoyo, arrepentimiento, asombro, cansansio, confusión, culpa, curiosidad, decepción, desdén, deseo, desesperación, dolor, duda, frustación, honestidad, impresión, indignación, interés, molestia, odio, orgullo, preocupación, remordimiento, sorpresa, tranquilidad, tristesa, vergüenza.</li>
+            <h3>Este modelo fue desarrollado para poder predecir la emoción presente dentro de una frase</h3>
+            <p>El modelo tiene las siguientes métricas:</p>
+            <ul>
+                <li><strong>Exactitud (Accuracy):</strong> 0.413</li>
+                <li><strong>Precisión (Precision):</strong> 0.273</li>
+                <li><strong>Recordatorio (Recall):</strong> 0.245</li>
+                <li><strong>Puntaje F1 (F1 Score):</strong> 0.252</li>
+            </ul>
+            <p>Dentro de las emociones que el modelo puede predecir se encuentran:</p>
+            <ul class="emotions">
+                <li>Admiración</li>
+                <li>Alegría</li>
+                <li>Amor</li>
+                <li>Ansiedad</li>
+                <li>Apoyo</li>
+                <li>Arrepentimiento</li>
+                <li>Asombro</li>
+                <li>Cansancio</li>
+                <li>Confusión</li>
+                <li>Culpa</li>
+                <li>Curiosidad</li>
+                <li>Decepción</li>
+                <li>Desdén</li>
+                <li>Deseo</li>
+                <li>Desesperación</li>
+                <li>Dolor</li>
+                <li>Duda</li>
+                <li>Frustración</li>
+                <li>Honestidad</li>
+                <li>Impresión</li>
+                <li>Indignación</li>
+                <li>Interés</li>
+                <li>Molestia</li>
+                <li>Odio</li>
+                <li>Orgullo</li>
+                <li>Preocupación</li>
+                <li>Remordimiento</li>
+                <li>Sorpresa</li>
+                <li>Tranquilidad</li>
+                <li>Tristeza</li>
+                <li>Vergüenza</li>
+            </ul>
         </div>
+        
         <form  class="search-bar" method="POST" action="/predict2" >
             <input type="text" id="user_input" name="user_input" placeholder="Ingresa una frase" required>
             <button class="search-btn"  type="submit" aria-label="Buscar">
